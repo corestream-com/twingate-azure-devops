@@ -19,7 +19,7 @@ Add the Twingate task to your pipeline and configure the required parameters. Th
 ### Yaml
 ```yaml
 steps:
-- task: twingate@0
+- task: twingate@1
   displayName: 'Twingate client'
   inputs:
     serviceKey: ${{ parameters.serviceKey }}
