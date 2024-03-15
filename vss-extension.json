@@ -12,7 +12,7 @@
     "description": "Twingate makes Zero Trust Network Access easy to deploy, even easier to use, and always secure.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/corestream/twingate-azure-devops"
+        "url": "https://github.com/corestream-com/twingate-azure-devops/"
     },
     "categories": [
         "Azure Pipelines"

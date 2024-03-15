@@ -4,7 +4,7 @@
   "name": "twingate",
   "friendlyName": "Twingate: It's time to ditch your VPN",
   "description": "Twingate makes Zero Trust Network Access easy to deploy, even easier to use, and always secure.",
-  "helpMarkDown": "[Learn more about this task](https://github.com/corestream/twingate-azure-devops)",
+  "helpMarkDown": "[Learn more about this task](https://github.com/corestream-com/twingate-azure-devops/blob/main/marketplace.md)",
   "category": "Utility",
   "author": "Preston Rodriguez",
   "version": {
