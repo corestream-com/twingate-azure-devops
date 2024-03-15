@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+  "id": "95d5ae81-5e5c-4ecb-abc1-b2bf83435905",
+  "name": "twingate",
+  "friendlyName": "Twingate: It's time to ditch your VPN",
+  "description": "Twingate makes Zero Trust Network Access easy to deploy, even easier to use, and always secure.",
+  "helpMarkDown": "[Learn more about this task](https://github.com/corestream/twingate-azure-devops)",
+  "category": "Utility",
+  "author": "Preston Rodriguez",
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "instanceNameFormat": "Twingate client",
+  "inputs": [
+    {
+      "name": "serviceKey",
+      "type": "string",
+      "label": "Service Key",
+      "defaultValue": "$(serviceKey)",
+      "required": true,
+      "helpMarkDown": "Base64 encoded Service Key"
+    }
+  ],
+  "execution": {
+    "Node16": {
+      "target": "index.js"
+    }
+  }
+}

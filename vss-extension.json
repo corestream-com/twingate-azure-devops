@@ -1,0 +1,71 @@
+{
+    "manifestVersion": 1,
+    "id": "twingate",
+    "name": "Twingate",
+    "version": "1.0.0",
+    "publisher": "corestream",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Twingate makes Zero Trust Network Access easy to deploy, even easier to use, and always secure.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/corestream/twingate-azure-devops"
+    },
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "network",
+        "security"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "twingate-task"
+        },
+        {
+            "path": "image.png",
+            "addressable": true
+        },
+        {
+            "path": "LICENSE",
+            "addressable": true
+        }
+    ],
+    "content":{
+        "license": {
+            "path": "LICENSE"
+        },
+        "details": {
+            "path": "marketplace.md"
+        }
+    },
+    "links": {
+        "home": {
+            "uri": "https://www.twingate.com"
+        },
+        "license": {
+            "uri": "./LICENSE"
+        }
+    },
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "twingate-task"
+            },
+            "demands": [
+                "Agent.OS -equals Linux"
+            ]
+        }
+    ]
+}
