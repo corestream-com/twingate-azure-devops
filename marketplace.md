@@ -2,6 +2,8 @@
 ---
 An Azure DevOps extension to connect to [Twingate](https://www.twingate.com/) networks to allow secure access to your resources from your pipelines.
 
+Now supports both Windows and Linux based agents.
+
 ## Installation
 1. Install the extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=corestream.twingate).
 2. Add the Twingate task to your pipeline.
