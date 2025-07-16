@@ -1,13 +1,14 @@
 param (
+    [ValidateSet("clean", "lint", "build", "package")]
     [string]$task = "build"
 )
 
-function CleanPkg {
+function Start-CleanPkg {
     Remove-Item *.vsix -ErrorAction SilentlyContinue
     Remove-Item twingate-task/index.js -ErrorAction SilentlyContinue
 }
 
-function Lint {
+function Start-Lint {
     Push-Location twingate-task
     npm install -f
     npm run lint
@@ -15,13 +16,13 @@ function Lint {
 }
 
 function Build-Task {
-    CleanPkg
+    Start-CleanPkg
     Push-Location twingate-task
     npm install -f
-    tsc -b
+    npm run build
     Pop-Location
 }
-function Package {
+function New-Package {
     Build-Task
     Push-Location twingate-task
     npm prune --production
@@ -30,9 +31,9 @@ function Package {
 }
 
 switch ($task) {
-    "clean" { CleanPkg }
-    "lint" { Lint }
+    "clean" { Start-CleanPkg }
+    "lint" { Start-Lint }
     "build" { Build-Task }
-    "package" { Package }
+    "package" { New-Package }
     default { Write-Host "Unknown task. Running 'build' by default."; Build-Task }
 }

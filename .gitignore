@@ -1,3 +1,6 @@
 **/node_modules/
 *.vsix
 *.js
+!/twingate-task/eslint.config.js
+twingate-task/tsconfig.tsbuildinfo
+.DS_Store
