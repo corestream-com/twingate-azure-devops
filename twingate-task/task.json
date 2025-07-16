@@ -9,8 +9,8 @@
   "author": "Preston Rodriguez",
   "version": {
     "Major": 1,
-    "Minor": 1,
-    "Patch": 15
+    "Minor": 2,
+    "Patch": 1
   },
   "instanceNameFormat": "Twingate client",
   "inputs": [
@@ -24,7 +24,7 @@
     }
   ],
   "execution": {
-    "Node16": {
+    "Node20_1": {
       "target": "index.js"
     }
   }
