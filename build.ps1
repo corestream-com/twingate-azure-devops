@@ -10,7 +10,7 @@ function Start-CleanPkg {
 
 function Start-Lint {
     Push-Location twingate-task
-    npm install -f
+    npm ci
     npm run lint
     Pop-Location
 }
@@ -18,7 +18,7 @@ function Start-Lint {
 function Build-Task {
     Start-CleanPkg
     Push-Location twingate-task
-    npm install -f
+    npm ci
     npm run build
     Pop-Location
 }

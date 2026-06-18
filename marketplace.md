@@ -10,6 +10,7 @@ Supports both Windows and Linux based agents.
 
 ## Requirements
 - Supports Linux and Windows agents.
+- Linux agents must support `apt`/`apt-get` for Ubuntu or Debian, or `dnf`/`yum` for RPM-based distributions.
 
 ## Configuration
 The Twingate task requires the following parameters:
@@ -29,4 +30,3 @@ steps:
 
 ### Classic
 ![Classic Release Pipeline](image.png)
-

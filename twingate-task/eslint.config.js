@@ -5,8 +5,10 @@ import globals from 'globals';
 
 export default [
   {
+    ignores: ['node_modules/**', 'index.js']
+  },
+  {
     files: ['**/*.ts'],
-    ignores: ['node_modules/**'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -26,7 +28,7 @@ export default [
     rules: {
       ...eslintRecommended.configs.recommended.rules,
       ...typescriptEslint.configs.recommended.rules,
-      'indent': ['error', 2],
+      'indent': ['error', 2, { SwitchCase: 1 }],
       'linebreak-style': ['error', 'unix'],
       'quotes': ['error', 'single'],
       'semi': ['error', 'always'],
