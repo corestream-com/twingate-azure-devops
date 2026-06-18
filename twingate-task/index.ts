@@ -118,8 +118,6 @@ function writeServiceKey(): string {
     throw new Error('The serviceKey input must be a base64-encoded Twingate service key JSON document.');
   }
 
-  tl.setSecret(serviceKey);
-
   const serviceKeyPath = path.join(getTempDirectory(), `twingate-servicekey-${process.pid}.json`);
   fs.writeFileSync(serviceKeyPath, serviceKey, { encoding: 'utf8', mode: 0o600 });
 
